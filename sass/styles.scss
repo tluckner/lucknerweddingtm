@@ -12,6 +12,22 @@
 /* ==========================================================================
 Global Styles
 ========================================================================== */
+.row {
+  margin-right: unset;
+  margin-left: unset;
+}
+.rsvp-btn {
+  max-width: 200px !important;
+}
+p {
+  margin-top: 10px;
+}
+.downsides {
+  padding-bottom: unset;
+}
+.contact {
+  padding-left: 5%;
+}
 .group:after {
   content: "";
   display: table;
@@ -49,9 +65,6 @@ body {
 ul, ol {
   margin: 0;
   padding: 0;
-}
-ul li {
-  list-style: none;
 }
 section .header {
   padding-bottom: 30px;
@@ -104,6 +117,60 @@ section .header {
   background-color: #000;
   border-radius: 4px;
 }
+
+.collapsible-container {
+  max-width: 800px;  /* Limit maximum width */
+  margin: 0 auto;    /* Center the container */
+  padding: 20px;
+}
+
+.collapsible {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.active, .collapsible:hover {
+  background-color: #f8f8f8;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  transition: 0.4s;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 15px;
+  width: 100%;  /* Make content full width of container */
+}
+
+.active + .content {
+  max-height: 500px;
+  padding: 18px;
+  border: 1px solid #eee;
+}
+
 /* ==========================================================================
 Animations
 ========================================================================== */
@@ -183,6 +250,7 @@ Navigation
   transition: opacity 0.5s;
 }
 .nav-toggle {
+  background-color: unset;
   position: absolute;
   top: 0;
   right: 15px;
@@ -252,18 +320,16 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/hero-min.jpg') center center;
+  background: url('../img/background.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
 
-  /*.rsvp-btn {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-  }*/
+  .rsvp-btn {
+    color: #ca92fe;
+  }
   .down-arrow a {
     color: $txt-light;
   }
@@ -293,7 +359,7 @@ Hero
 }
 .fixed {
   position: fixed;
-  background-color: rgba(55, 36, 40, .88);
+  background-color: rgba(202,146,254, .88);
   z-index: 999;
   width: 100%;
 }
@@ -318,7 +384,7 @@ header {
     display: inline-block;
   }
   .logo img {
-    height: 19px;
+    height: 39px;
   }
   ul.primary-nav {
     margin: 0 0 0 75px;
@@ -328,8 +394,9 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
         padding-right: 25px;
+        font-size: 20px;
+        font-weight: bold;        
 
         &:hover {
           color: $accent-color;
@@ -345,7 +412,8 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
+        font-size: 20px;
+        font-weight: bold;
 
         &:hover {
           color: $accent-color;
@@ -367,7 +435,6 @@ header {
   color: #fff;
   font-size: 30px;
   position: absolute;
-  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -560,6 +627,25 @@ Features-stack
     padding-left: 100px;
   }
 
+  .time {
+    font-size: 13px;
+    font-style: italic;
+    text-transform: lowercase;
+    color: $txt-primary;
+  }
+}
+
+/* ==========================================================================
+.seattle
+========================================================================== */
+.seattle {
+  .leftcol {
+    padding-right: 100px;
+    border-right: solid 1px $keyline-color;
+  }
+  .rightcol {
+    padding-left: 100px;
+  }
   .time {
     font-size: 13px;
     font-style: italic;
@@ -788,7 +874,7 @@ Google map
 RSVP form
 ========================================================================== */
 .rsvp {
-  padding-bottom: 140px;
+  padding-bottom: 40px;
   .rsvp-form {
     .rsvp-btn {
       padding: 15px 0;
@@ -821,7 +907,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key {
+      i.fa-user, i.fa-users, i.fa-envelope, .fa-key, i.fa-cutlery, .fa-question, .fa-music {
         font-size: 14px;
         position: absolute;
         top: 50%;
@@ -858,14 +944,14 @@ Footer
 ========================================================================== */
 footer {
   .content {
-    border-top: 1px solid $keyline-color;
-    padding-bottom: 20px;
+    border-top: 0px solid $keyline-color;
+    padding-bottom: 150px;
   }
   .to-top-wrapper {
     font-size: 30px;
     display: block;
     cursor: pointer;
-    margin: -25px auto 50px;
+    margin: 0px auto 25px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -884,7 +970,7 @@ footer {
     margin-top: -5px;
   }
   span.fa-heart {
-    color: #ff415c;
+    color: #ca92fe;
     font-size: 18px;
     margin: 0 2px;
   }

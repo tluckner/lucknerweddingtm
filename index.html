@@ -10,55 +10,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Ram & Antara getting hitched!</title>
+    <title>Merrilee & Rami's Wedding!</title>
     <meta name="description" content="We would like to invite you to our big day.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Ram & Antara getting hitched">
+    <meta property="og:title" content="Merrilee & Rami's Wedding">
     <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-
-    <script>
-        // load css files from CDN if local node_modules fail
-        function loadCssFromCDN(css) {
-            // create new link tag
-            const link = document.createElement('link');
-            if (css === 'animate.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
-            } else if (css === 'font-awesome.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-            }
-            link.rel = 'stylesheet';
-
-            // add link tag to head section
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
-
-        // load js files from CDN if local node_modules fail
-        function loadJsFromCDN(js) {
-            if (js === 'waypoints.js') {
-                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
-            } else if (js === 'jquery.js') {
-                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
-            }
-        }
-    </script>
-
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> <!-- Do not modify or touch -->
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <script src="js/dark-mode.js"></script>
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -75,8 +49,8 @@
                         <ul class="primary-nav">
                             <li><a href="#intro">How we met</a></li>
                             <li><a href="#events">Events</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                            <li><a href="#eng-pics">Engagement</a></li>
+                            <li><a href="#eng-pics">Photos</a></li>
+                            <li><a href="#seattle">More</a></li>
                             <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
                         </ul>
                         <ul class="member-actions">
@@ -95,17 +69,14 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content text-center">
-                    <!--<h1>Ram and Antara</h1>-->
                     <img src="img/logo-lg.png">
-                    <!--<p class="intro">Ram & Antara are getting hitched!</p>-->
-                    <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+            <div class="col-sm-4 hidden-xs text-center">
+                <a href="#rsvp" class="btn btn-accent btn-large rsvp-btn" style="color: white;">RSVP</a></div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
@@ -113,14 +84,19 @@
 </section>
 
 <section id="invitation" class="section-padding">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>We are getting hitched</h3>
-                <p>The dates are 27<sup>th</sup> & 28<sup>th</sup> of November '17 and we would like you to be a part of
+                <h3>We are getting married!</h3>
+                <p>The date is Thursday, 28<sup>th</sup> of August 2025, and we would like you to be a part of
                     it.</p>
-                <div class="share-bar"></div>
             </div>
+        </div>
+        <div class="countdown-container text-center">
+            <!-- <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+            <a href="https://logwork.com/countdown-565g" class="countdown-timer" data-timezone="America/Los_Angeles" data-textcolor="#ffffff" data-date="2025-03-09 00:36" data-background="#000000" data-digitscolor="#ffffff">Countdown Timer</a> -->
+            <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+            <a href="https://logwork.com/countdown-timer" onclick="return false" class="countdown-timer" id="countdown-timer" data-style="columns" data-timezone="America/Los_Angeles" data-date="2025-08-28 18:00"><h3>Countdown to Our Wedding</h3></a>
         </div>
     </div>
 </section>
@@ -132,27 +108,25 @@
                 <h3 class="header">How we met</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/IMG_2317.jpg" class="wp1"></div>
-            <div class="col-md-6">
-                <p>
-                    I first saw Antara in the Fall of 2008 when we started our undergrad. I was instantly attracted to
-                    her but was far too nervous to speak to her. I had told my friend I liked her and news had traveled
-                    fast and she soon found out. Her first reaction was "Who is Ram?" and she began searching for me in
-                    the class. She started to take notice of me and no matter how boring the lecture was, we never
-                    missed a class after that. After a good few months I finally plucked up the courage to ask her out
-                    and the rest is history :)
-                </p>
+        <div class="row" style="flex-wrap: wrap;">
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/eng_pics/2023_oct_barcelona_merr_rose_how_we_met.jpg" class="wp1"></div>
+            <div class="col-md-6" style="font-weight: bold;">
+                <p>We met through mutual friends in 2015, but it wasn’t love at first sight.
+                We started as friends, just hanging out and having fun, but after a few
+                months, we realized we were pretty much inseparable.</p>
+                <p>Whether it was Costco runs, festivals, club nights, movies, or dinner, we were
+                always together. One of our favorite spots was Vermillion, where we’d grab drinks
+                and have long, random conversations. At some point, it just clicked—we weren’t
+                just friends anymore.</p>
+                <p>Even though we grew up on opposite sides of the world, we found that our values
+                aligned in all the ways that mattered. We’ve never been the most traditional
+                couple, but that’s exactly what makes us work.</p>
             </div>
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/IMG_2317.jpg" class="wp8"></div>
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.jpg" class="wp9"></div>
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/eng_pics/2023_nov_seattle_rami_how_we_met.png" class="wp2"></div>
         </div>
     </div>
 </section>
-
+<br>
 <section class="events section-padding" id="events">
     <div class="container">
         <div class="row">
@@ -163,53 +137,26 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
-                    <p><strong>27th November</strong></p>
-
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
-                    <p>It's one of the oldest traditional Indian pre wedding ceremony where the bride and groom
-                        attend the event together and a professional mehndi artist applies
-                        mehndi to the bride's hands and feet. This will be having a celebratory
-                        festival feel to it with people wearing vibrant clothes and dancing, singing, playing
-                        games and a lot more.</p>
-                </div>
-                <div class="wp5">
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
-                    <p>This event is no way close to ethnic. The bride & groom would like to have some "shots before the
-                        knot". With booze flowing down the floor and the western attire on, everyone would be busy
-                        showing off their new moves on the stage which they have finely honed. Lastly, expect some beer
-                        pong matches & karaoke for sure.</p>
+                    <p><strong>Ceremony</strong></p>
+                    <h5>Stay tuned for updates! <span class="time"></span></h5>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
-                    <p><strong>28th November</strong></p>
-
-                    <h5>Haldi <span class="time">10AM-11AM</span></h5>
-                    <p>The haldi ceremony is usually held separately for the bride and the groom. This one is for the
-                        bride. It is a low-key event that involves the application of turmeric paste on the hands, legs
-                        and face of the bride. The groom is not allowed to see the bride after this ritual until the
-                        final wedding ceremony starts.</p>
-                </div>
-                <div class="wp6">
-                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
-                    <p>This is the main event in the entire wedding when the bride and the groom tie the
-                        knot. The groom comes with the barat and is greeted by the bride side with some dhol of course
-                        as maximum number of guests would be attending this event. This is when the couple circle the
-                        sacred fire and are finally declared husband and wife.</p>
+                    <p><strong>Reception</strong></p>
+                    <h5>Check back later! <span class="time">
+<!--                        TBD-->
+                    </span></h5>
                 </div>
             </div>
         </div>
         <div class="row section-padding">
             <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                <a class="btn btn-fill btn-small" data-toggle="modal" data-target="#dc-modal">
                     <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
                 </a>
             </div>
         </div>
-        <!--<div class="row">
-            <div class="col-xs-12 section-border section-padding">
-            </div>
-        </div>-->
     </div>
 
     <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -218,59 +165,13 @@
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
-                    <p>
-                        <strong>Ethnic indian wear</strong>
+                    <h3 class="text-center section-padding">What to wear?</h3>
+                    <p class="downsides">
+                        Semi-formal to formal attire requested. No theme—just dress to impress!
                         <br>
-                        Ladies can wear something
-                        <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-women/">bright & vivid</a>
-                        and gentlemen can be on
-                        their <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-men/">vibrant
-                        kurtas</a> with pants or pyjamas along with an optional shawl.
-                    </p>
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
-                    <p>
-                        <strong>Western attire</strong>
-                        <br>
-                        A semi-formal look that is contemporary & fashionable which is not too prim & proper is the best
-                        to pull off this night. You can see some pins for
-                        <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-women/">ladies</a>
-                        & <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-men/">gents</a>.
-                    </p>
-                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
-                    <p>
-                        <strong>Indo-western</strong>
-                        <br>
-                        Ladies can flaunt their unconventional sarees,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-lehengas/">lehengas</a>,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-anarkalis/">anarkalis</a>,
-                        dresses and the list
-                        goes on whereas gentlemen can wear any kind of suit or just blazer. If you don't like to wear a
-                        suit/blazer, you can do a <a
-                            href="https://www.pinterest.com/ramswarooppatra/high-neck-jackets-for-men/">high-neck
-                        (band gala) waistcoat & shirt</a> combo.
+                        Please avoid casual wear like jeans or sneakers.
                     </p>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-</section>
-
-<section id="instagram" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>A picture is worth a thousand words!</h3>
-                <p>Help us capture the moment, tag your photos with the hashtag
-                    <a href="https://instagram.com/explore/tags/ramandantara/" target="_blank">#RamAndAntara</a>
-                </p>
-            </div>
-        </div>
-        <div class="row section-border wp7">
-            <div class="col-md-4 col-md-offset-4">
-                <img src="img/iphone_instagram.jpg">
             </div>
         </div>
     </div>
@@ -280,9 +181,72 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">Engagement Pics</h3>
+                <h3 class="header">Photos</h3>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/eep.png">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/eep.png" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/2018_may_las_vegas.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/2018_may_las_vegas.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/2022_may_hawaii.png">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/2022_may_hawaii.png" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/2024_apr_japan_over_shoulder.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/2024_apr_japan_over_shoulder.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/2025_feb_pv.png">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/2025_feb_pv.png" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/tete.png">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/tete.png" alt=""/>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br>
         <div class="row">
             <div class="col-md-2">
                 <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
@@ -290,47 +254,47 @@
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
+                        <img src="img/eng_pics/_RFX2942-lg.jpg" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3483-lg.jpg">
+                <a class="fancybox" rel="group" href="img/eng_pics/2021_dec_puerto_vallarta.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/IMG_3483-sm.jpg" alt=""/>
+                        <img src="img/eng_pics/2021_dec_puerto_vallarta.jpg" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2992-lg.jpg">
+                <a class="fancybox" rel="group" href="img/eng_pics/2024_apr_japan.png">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/_RFX2992-sm.jpg" alt=""/>
+                        <img src="img/eng_pics/2024_apr_japan.png" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX3064-lg.jpg">
+                <a class="fancybox" rel="group" href="img/eng_pics/2024_apr_nikko.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/_RFX3064-sm.jpg" alt=""/>
+                        <img src="img/eng_pics/2024_apr_nikko.jpg" alt=""/>
                     </div>
                 </a>
             </div>
             <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4089-lg.jpg">
+                <a class="fancybox" rel="group" href="img/eng_pics/2017_apr_AzizaMax.jpg">
                     <div class="img-wrap">
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/NGP_4089-sm.jpg" alt=""/>
+                        <img src="img/eng_pics/2017_apr_AzizaMax.jpg" alt=""/>
                     </div>
                 </a>
             </div>
@@ -340,41 +304,33 @@
                         <div class="overlay">
                             <i class="fa fa-search"></i>
                         </div>
-                        <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
+                        <img src="img/eng_pics/NGP_4119-lg.jpg" alt=""/>
                     </div>
                 </a>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
-    </div>
-    <!--<div class="row">
-        <div class="col-md-12">
-            <div class="diamond floating-logo">
-                <img src="img/sketch-logo.png" alt="Sketch Logo">
-                <div class="ring"></div>
-            </div>
-        </div>
-    </div>-->
 </section>
 
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/9giqL1H6yRs',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
+         data-property="{videoURL:'https://youtu.be/SnRsjL4SD0g',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:90, stopAt:440, opacity:1}">
     </div>
     <div id="video-content">
-        <h5>Kolkata</h5>
-        <p>City of joy</p>
+        <h5>Seattle</h5>
+        <p>Emerald City</p>
     </div>
 </section>
 
 <section id="map" class="section-padding">
     <div class="text-center">
         <h3>How do I get there?</h3>
-        <p>It's way easier than you think!</p>
+        <p style="margin-top: 10px; font-weight: bold; margin-left: 3%; margin-right: 3%;">
+            The wedding venue is in the Fremont neighborhood, typically a 15-minute drive
+            from downtown. However, be sure to allow extra time for Thursday evening traffic.
+            If you plan to drive, street parking is available. We recommend using a
+            rideshare app like Lyft, especially if you plan on drinking!
+        </p>
     </div>
     <div id="map-canvas"></div>
     <div id="map-content-wrapper" class="container pointer-events-none">
@@ -388,23 +344,31 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>ITC Fortune Park</h5>
-                            <p>Kona Expressway, Howrah, West Bengal 711403, India</p>
+                            <h5>The Fremont Foundry</h5>
+                            <a href="https://maps.app.goo.gl/sGhG27wEnM464X7K6">
+                            <p class="contact">
+                                154 N 35th St. 
+                                <br>
+                                Seattle, WA 98103
+                            </p>
+                            </a>
                         </div>
                         <div class="col-md-6">
-                            <h5>Mr. Amit Roy</h5>
-                            <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
-                                <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a></p>
+                            <h5>Contact Us!</h5>
+                            <p class="contact">
+                                <i class="fa fa-mobile"></i> Merrilee <a href="tel://+15176174141">+1 5176174141</a><br>
+                                <i class="fa fa-mobile"></i> Rami <a href="tel://+12062917416">+1 2062917416</a>
+                            </p>
                         </div>
                     </div>
                     <div class="row text-center">
                         <div class="col-md-6" style="padding: 5px;">
                             <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
+                               href="https://m.lyft.com/"><i
+                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book a Lyft</a>
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                            <a class="btn btn-fill btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
                                 map</a>
                         </div>
                     </div>
@@ -415,7 +379,6 @@
 </section>
 
 <section class="rsvp text-center" id="rsvp">
-
     <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -423,105 +386,246 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
+                        <h3>Thank you for your response!</h3>
+<!--                        <p>We are glad to see you join us on our big day.</p>-->
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <p>We would greatly appreciate if you could RSVP before the 28th of June '25</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
+                                <i class="fa fa-user"></i>
+                                <input name="name" class="" placeholder="Your name" required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
+                                <i class="fa fa-envelope"></i>
+                                <input type="email" name="email" class="" placeholder="Your email" required>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
+                                <i class="fa fa-key"></i>
+                                <input type="number" name="invite_code" id="invite_code"
+                                class="" min="0" placeholder="Invite code" required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
+                                <i class="fa fa-question"></i>
+                                <input name="will_attend" class="" placeholder="Will attend?" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-cutlery"></i>
+                                <input name="food" class="" placeholder="Your Dietary Restrictions">
+                            </div>
+                        </div>
+
+                         <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-music"></i>
+                                <input name="song" class="" placeholder="Song request?">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i>
+                                <input name="guest_name" class="" placeholder="Name of guest">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-cutlery"></i>
+                                <input name="guest_food" class="" placeholder="Guest Dietary Restrictions">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
+                    <br>
+                    <button class="btn-fill rsvp-btn">RSVP!</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
+<hr>
+<section id="seattle" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">More Info</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="collapsible-container">
+                <button type="button" class="collapsible">Where to stay in Seattle</button>
+                <div class="content">
+                    <h4>We recommend a hotel or short-term rental in one of the following neighborhoods...</h4>
+                    <br>
+                    <div class="neighborhood">
+                        <h5>Downtown Seattle – Best for First-Time Visitors & Sightseeing</h5>
+                        <ul style="padding-left:20px">
+                            <li>Close to top attractions like Pike Place Market, the Space Needle, and the waterfront.</li>
+                            <li>Easy access to public transportation.</li>
+                            <li>Plenty of hotel options from luxury to budget-friendly.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Can be pricier and more touristy.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Belltown – Best for Nightlife & Dining</h5>
+                        <ul style="padding-left:20px">
+                            <li>Trendy bars, coffee shops, and restaurants.</li>
+                            <li>Walkable to downtown and the waterfront.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Can get noisy, especially on weekends.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Capitol Hill – Best for a Lively, Artsy Vibe & LGBTQ+ Friendly Scene</h5>
+                        <ul style="padding-left:20px">
+                            <li>Seattle’s nightlife hub with fantastic bars and music venues.</li>
+                            <li>Great food scene, from casual to high-end dining.</li>
+                            <li>Beautiful parks and a creative atmosphere.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Not as close to major tourist attractions.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Queen Anne (Lower Queen Anne) – Best for a Quiet Yet Central Location</h5>
+                        <ul style="padding-left:20px">
+                            <li>Near the Space Needle and Museum of Pop Culture.</li>
+                            <li>More residential, with charming streets and great views.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Hilly terrain can be challenging.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Fremont – Best for a Quirky, Laid-Back Stay</h5>
+                        <ul style="padding-left:20px">
+                            <li>Fun, artsy vibe with boutiques and breweries.</li>
+                            <li>Home to the famous Fremont Troll.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> A bit farther from downtown (10-15 min drive).</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Ballard – Best for a More Local, Hip Experience</h5>
+                        <ul style="padding-left:20px">
+                            <li>Great food, coffee shops, and craft breweries.</li>
+                            <li>Home to Ballard Locks and Golden Gardens Beach.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Further from downtown (15-20 min drive).</p>
+                    </div>
+
+                    <h5>Best Choice Based on Your Needs:</h5>
+                    <ul style="padding-left:20px">
+                        <li><strong>First-time visitors:</strong> Downtown or Belltown.</li>
+                        <li><strong>Nightlife & foodies:</strong> Capitol Hill or Belltown.</li>
+                        <li><strong>More relaxed stay:</strong> Queen Anne, Fremont, or Ballard.</li>
+                    </ul>
+                </div>
+                <button type="button" class="collapsible">What to eat and do in Seattle</button>
+                <div class="content">
+                    <br>
+                    <p><strong>Visit our Google list: </strong>
+                    <a href="https://maps.app.goo.gl/5XJ6LgiW6GHFxUiSA">Rami & Merrilee's Favorites</a></p>
+                </div>
+                <button type="button" class="collapsible">Gifts?</button>
+                <div class="content">
+                    <p>
+                        Please no gifts! We have everything we could possibly need, and we know travel
+                        can be expensive. If you must contribute, please donate to one of the following
+                        fundraisers:
+                    </p>
+                    <ul style="padding-left:20px">
+                        <li><a href="https://donate.unrwa.org/int/en/gaza">United Nations Relief and Works Agency</a></li>
+                        <li><a href="https://www.pcrf.net/">Palestine Children's Relief Fund</a></li>
+                        <li><a href="https://wck.org/">World Central Kitchen</a></li>
+                        <li><a href="https://www.msf.org/donate">Médecins Sans Frontières</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Crafted by Ram with lots of <span class="fa fa-heart pulse2"></span> for Antara</p>
+                <span class="fa fa-heart pulse2"></span>
             </div>
         </div>
     </div>
 </footer>
-<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
-<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
-<!-- Google Analytics -->
+        src="https://maps.googleapis.com/maps/api/js?loading=async&key=,&v=3.exp&callback=initMap"></script>
 <script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-46465113-4', 'auto');
-    ga('send', 'pageview');
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        // Close all other panels
+        var allContent = document.getElementsByClassName("content");
+        var allCollapsible = document.getElementsByClassName("collapsible");
+        
+        for(var j = 0; j < allCollapsible.length; j++) {
+            if(allCollapsible[j] !== this) {
+                allCollapsible[j].classList.remove("active");
+                allContent[j].style.maxHeight = null;
+            }
+        }
+        
+        // Toggle current panel
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+<script>
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 </script>
 </body>
 </html>

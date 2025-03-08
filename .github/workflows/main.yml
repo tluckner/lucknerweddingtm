@@ -1,0 +1,29 @@
+name: Build website with NodeJS and Gulp
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
+
+    - name: Build
+      env:
+        MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
+      run: |
+        bun install
+        gulp
+    
+    - uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: .
+        branch: gh-pages
+        clean-exclude: pr-preview
+        force: false

@@ -1,0 +1,35 @@
+name: Preview/PR - Build website with NodeJS and Gulp
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
+
+    - name: Build
+      if: github.event.action != 'closed'
+      env:
+        MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
+      run: |
+        bun install
+        gulp
+
+    - name: Deploy preview
+      uses: rossjrw/pr-preview-action@v1
+      with:
+        source-dir: .
+        preview-branch: gh-pages
+        umbrella-dir: pr-preview
+        action: auto
+        
+    
