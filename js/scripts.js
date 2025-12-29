@@ -219,7 +219,8 @@ $(document).ready(function () {
             && enteredCodeHash !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycby-Ux5oXebMUc73E52d_GH9VoUGdPlEYh10IaSYR0v59KjC1A8EQ1ldVnUf9oeCL_dm/exec', data)
+            <!-- 
+                $.post('https://script.google.com/macros/s/AKfycby-Ux5oXebMUc73E52d_GH9VoUGdPlEYh10IaSYR0v59KjC1A8EQ1ldVnUf9oeCL_dm/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -228,7 +229,19 @@ $(document).ready(function () {
                         $('#alert-wrapper').html('');
                         $('#rsvp-modal').modal('show');
                     }
-                })
+                }) 
+                -->
+                $.post($(this).attr('action'), data)
+            .done(function (response) {
+                // Ensure we are checking the actual result property
+                if (response.result === "success") {
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                    $('#rsvp-form')[0].reset(); // Clear the form on success
+                } else {
+                    $('#alert-wrapper').html(alert_markup('danger', response.message || 'Error saving details.'));
+                }
+            })
                 .fail(function (data) {
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
