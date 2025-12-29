@@ -220,7 +220,7 @@ $(document).ready(function () {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             <!-- 
-                $.post('https://script.google.com/macros/s/AKfycby-Ux5oXebMUc73E52d_GH9VoUGdPlEYh10IaSYR0v59KjC1A8EQ1ldVnUf9oeCL_dm/exec', data)
+                $.post('https://script.google.com/macros/s/AKfycbxYXJX2jDeSOe3SA6AX-o6ydL46ZNJagodNzmViP1r5sn8ussHs_MoWkS3w7U86hjni/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
