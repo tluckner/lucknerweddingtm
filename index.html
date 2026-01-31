@@ -422,6 +422,13 @@
                       action="https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec"
                       method="POST">
                     <div class="row">
+                         <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your name"
+                                                                 required>
+                            </div>
+                        </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
@@ -429,19 +436,13 @@
                                                                      required>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="text" name="extras" class="" 
-                                                                  placeholder="Invited Guest(s) Names"
+                                <i class="fa fa-users"></i><input type="number" name="phone" class=""
+                                                                  placeholder="Your Phone Number"
                                                                   required>
                             </div>
                         </div>
@@ -449,7 +450,41 @@
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
                                                                 class="" min="0"
-                                                                placeholder="Code (on Invitation)"
+                                                                placeholder="Invite code"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="name" name="accept" class=""
+                                                                  placeholder="List All Accepting Invitation"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input type="name" name="decline"
+                                                                class="" 
+                                                                placeholder="List All Declinging Invitation"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                    </div> <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="name" name="diet" class=""
+                                                                  placeholder="Any Dietary Restrictions"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input type="name" name="comments" 
+                                                                class="" 
+                                                                placeholder="Other Comments"
                                                                 required>
                             </div>
                         </div>
