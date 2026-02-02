@@ -187,14 +187,14 @@ $(document).ready(function () {
             title: "Tommy and Maria's Wedding",
 
             // Event start date
-            start: new Date('Dec 05, 2026 03:15'),
+            start: new Date('Dec 05, 2026 15:15'),
 
             // Event duration (IN MINUTES)
             // duration: 345,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Dec, 2026 09:00'),
+            end: new Date('Dec, 2026 21:00'),
 
             // Event Address
             address: 'Memorial Presbyterian Church, St. Augustine, FL',
