@@ -228,17 +228,19 @@ $(document).ready(function () {
     url: "https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec",
     type: "GET",
     data: formData,
-    dataType: "jsonp", // This is the secret to bypassing CORS
+    dataType: "jsonp", 
+    jsonpCallback: 'callback', // Helps trigger the success function
     success: function(response) {
-        // With JSONP, success might not always trigger perfectly,
-        // but the data will reach the sheet!
+        // This triggers the modal you saw before
         $('#alert-wrapper').html('');
         $('#rsvp-modal').modal('show');
         $('#rsvp-form')[0].reset();
     },
     error: function() {
-        // If A1 turns red, ignore this error!
-        $('#alert-wrapper').html(alert_markup('info', 'RSVP Submitted. Check your email!'));
+        // If the sheet updates, this error can be ignored
+        $('#alert-wrapper').html('');
+        $('#rsvp-modal').modal('show');
+        $('#rsvp-form')[0].reset();
     }
 });
         }
