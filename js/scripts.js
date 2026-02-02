@@ -209,34 +209,35 @@ $(document).ready(function () {
 /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
-        var data = $(this).serialize();
+
+        // 1. Convert form data into an object so the Spreadsheet can read it
+        var formData = {};
+        $(this).serializeArray().forEach(function(item) {
+            formData[item.name] = item.value;
+        });
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
         var enteredCodeHash = MD5($('#invite_code').val());
         
-        // Validation for the invite codes
         if (enteredCodeHash !== '7409a91d5689a33a7f412422dbd6f89f' 
             && enteredCodeHash !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            // Using $.ajax for more reliable communication with Google Apps Script
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec",
                 type: "POST",
-                data: data,
-                dataType: "json",
+                data: formData, // Send the object instead of the serialized string
                 success: function(response) {
                     if (response.result === "success") {
                         $('#alert-wrapper').html('');
                         $('#rsvp-modal').modal('show');
-                        $('#rsvp-form')[0].reset(); // Clear the form on success
+                        $('#rsvp-form')[0].reset();
                     } else {
                         $('#alert-wrapper').html(alert_markup('danger', response.message || 'Error saving details.'));
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    console.log("Error details:", textStatus, errorThrown);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server.'));
                 }
             });
