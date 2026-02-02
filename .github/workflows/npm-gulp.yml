@@ -1,4 +1,4 @@
-name: NodeJS with Gulp
+name: Deploy Master to Pages
 
 on:
   push:
@@ -10,32 +10,21 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Master
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18.x
-
-      - name: Install and Build
-        run: |
-          npm install
-          gulp
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # If gulp puts files in a folder like 'dist', change '.' to 'dist'
+          # This uploads the entire master branch as the website
           path: '.'
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
