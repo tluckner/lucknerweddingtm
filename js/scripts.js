@@ -222,7 +222,7 @@ $(document).ready(function () {
         } else {
             // Using $.ajax for more reliable communication with Google Apps Script
             $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec",
+                url: "https://script.google.com/macros/s/AKfycbzSiT2MkjR3Lc311ORBAcJ-jwfnMuYMvJvA_Jajn5g/dev",
                 type: "POST",
                 data: data,
                 dataType: "json",
