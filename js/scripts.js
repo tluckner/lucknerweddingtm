@@ -194,7 +194,7 @@ $(document).ready(function () {
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Dec, 2026 21:00'),
+            end: new Date('Dec 05, 2026 21:00'),
 
             // Event Address
             address: 'Memorial Presbyterian Church, St. Augustine, FL',
