@@ -210,7 +210,6 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
 
-        // 1. Convert form data into an object so the Spreadsheet can read it
         var formData = {};
         $(this).serializeArray().forEach(function(item) {
             formData[item.name] = item.value;
@@ -225,23 +224,23 @@ $(document).ready(function () {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec",
-    type: "GET",
-    data: formData,
-    dataType: "jsonp", 
-    jsonpCallback: 'callback', // Helps trigger the success function
-    success: function(response) {
-        // This triggers the modal you saw before
-        $('#alert-wrapper').html('');
-        $('#rsvp-modal').modal('show');
-        $('#rsvp-form')[0].reset();
-    },
-    error: function() {
-    $('#alert-wrapper').html('');
-    $('#rsvp-modal').modal('show');
-    $('#rsvp-form')[0].reset();
-}
-});
+                url: "https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec",
+                type: "GET",
+                data: formData,
+                dataType: "jsonp", 
+                jsonpCallback: 'callback',
+                success: function(response) {
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                    $('#rsvp-form')[0].reset();
+                },
+                error: function() {
+                    // Removed the "Check the sheet" alert. Now shows success anyway.
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                    $('#rsvp-form')[0].reset();
+                }
+            });
         }
     });
 
