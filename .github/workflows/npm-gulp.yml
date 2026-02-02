@@ -2,20 +2,21 @@ name: NodeJS with Gulp
 
 on:
   push:
-    branches: [ "master" ] # Double check if your branch is 'master' or 'main'
+    branches: [ "master" ]
 
 permissions:
-  pages: write      # Required for deploying to Pages
-  id-token: write   # Required for security
-  contents: read    # Required to read the code
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Use Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
@@ -28,15 +29,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # This should point to the folder Gulp creates (usually 'dist' or '.')
-          path: '.' 
+          path: '.'
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
