@@ -206,8 +206,7 @@ $(document).ready(function () {
 
     $('#add-to-cal').html(myCalendar);
 
-
-    /********************** RSVP **********************/
+/********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
@@ -215,37 +214,32 @@ $(document).ready(function () {
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
         var enteredCodeHash = MD5($('#invite_code').val());
-        if (enteredCodeHash !== '7409a91d5689a33a7f412422dbd6f89f'
+        
+        // Validation for the invite codes
+        if (enteredCodeHash !== '7409a91d5689a33a7f412422dbd6f89f' 
             && enteredCodeHash !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            <!-- 
-                $.post('https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec', data)
-                .done(function (data) {
-                    console.log(data);
-                    if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
-                    } else {
+            // Using $.ajax for more reliable communication with Google Apps Script
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbyji0_RD5AN5rdx20VuRHgNGOGSJhee6FrP-IpqsoRFnRHSY8S88bJUqINLnx3pMyHY/exec",
+                type: "POST",
+                data: data,
+                dataType: "json",
+                success: function(response) {
+                    if (response.result === "success") {
                         $('#alert-wrapper').html('');
                         $('#rsvp-modal').modal('show');
+                        $('#rsvp-form')[0].reset(); // Clear the form on success
+                    } else {
+                        $('#alert-wrapper').html(alert_markup('danger', response.message || 'Error saving details.'));
                     }
-                }) 
-                -->
-                $.post($(this).attr('action'), data)
-            .done(function (response) {
-                // Ensure we are checking the actual result property
-                if (response.result === "success") {
-                    $('#alert-wrapper').html('');
-                    $('#rsvp-modal').modal('show');
-                    $('#rsvp-form')[0].reset(); // Clear the form on success
-                } else {
-                    $('#alert-wrapper').html(alert_markup('danger', response.message || 'Error saving details.'));
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log("Error details:", textStatus, errorThrown);
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server.'));
                 }
-            })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
+            });
         }
     });
 
