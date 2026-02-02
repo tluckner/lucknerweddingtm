@@ -237,11 +237,10 @@ $(document).ready(function () {
         $('#rsvp-form')[0].reset();
     },
     error: function() {
-        // If the sheet updates, this error can be ignored
-        $('#alert-wrapper').html('');
-        $('#rsvp-modal').modal('show');
-        $('#rsvp-form')[0].reset();
-    }
+    $('#alert-wrapper').html('');
+    $('#rsvp-modal').modal('show');
+    $('#rsvp-form')[0].reset();
+}
 });
         }
     });
