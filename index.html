@@ -64,35 +64,6 @@
         margin-top: -300px; /* Adjust this number to move it higher or lower */
     }
         
-    .hero {
-        background-image: url("landscape.png");
-        background-size: cover;
-        background-position: center center;
-        min-height: 750px;
-        width: 100%;
-        display: block;
-    }
-
-    /* Mobile View - Full Image Visibility */
-    @media (max-width: 768px) {
-        .hero {
-            /* This height calculation (750/1920) ensures the full image fits */
-            background-size: contain !important; 
-            background-repeat: no-repeat;
-            /* Shorter height for mobile to fit the wide photo shape */
-            min-height: 250px !important; 
-            background-color: #fff;
-        }
-
-        .hero-content {
-           margin-top: -80px !important;
-        }
-        
-        .hero-content img {
-            width: 60% !important;
-        }
-    }
-        
     .final-hero-banner {
         /* Increased height so more of the landscape photo is visible */
         min-height: 800px; 
