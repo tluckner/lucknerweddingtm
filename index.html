@@ -78,14 +78,23 @@ CSS
     }
 
     .final-hero-banner {
-        min-height: 600px; /* Adjust this to make the banner taller or shorter */
+        /* Increased height so more of the landscape photo is visible */
+        min-height: 800px; 
+        
+        /* background-position: center center keeps the middle of your photo visible */
         background: url("mountains.jpg") center center no-repeat;
-        background-size: cover; /* This makes it fill the full width and height */
+        background-size: cover; 
+        
         width: 100%;
         display: block;
         margin: 0;
         padding: 0;
         position: relative;
+    }
+    @media (max-width: 768px) {
+        .final-hero-banner {
+            min-height: 400px;
+        }
     }
 </style>
 </head>
