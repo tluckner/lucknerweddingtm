@@ -77,18 +77,32 @@ CSS
         margin-top: -300px; 
     }
 
+    .hero {
+        background-image: url("landscape.png");
+        background-size: cover;
+        background-position: center center;
+        min-height: 750px;
+        width: 100%;
+    }
+
+    /* Mobile Settings: Make the image "Fit" instead of "Fill" */
     @media (max-width: 768px) {
         .hero {
-            /* 'contain' shows the whole image, but may leave some background color visible */
-            /* Alternatively, use '100% 100%' if you don't mind a little stretching */
-            background-size: cover; 
-            background-position: center center;
-            min-height: 500px; /* Reducing height on mobile helps show more of the photo width */
+            /* This ensures the entire image width is visible */
+            background-size: contain !important; 
+            background-repeat: no-repeat;
+            /* We lower the height so there isn't a massive empty gap below the photo */
+            min-height: 250px !important; 
+            background-color: #fff; /* Matches the page background */
         }
         
-        .hero .hero-content img {
-            width: 80%; /* Makes your logo/names a bit larger on small screens */
-            margin-bottom: 20%;
+        .hero-content {
+            /* Adjusts your names/logo to fit in the new smaller header */
+            margin-top: -80px !important;
+        }
+        
+        .hero-content img {
+            width: 60% !important; /* Shrinks the logo so it doesn't look huge */
         }
     }
         
