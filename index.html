@@ -77,6 +77,21 @@ CSS
         margin-top: -300px; 
     }
 
+    @media (max-width: 768px) {
+        .hero {
+            /* 'contain' shows the whole image, but may leave some background color visible */
+            /* Alternatively, use '100% 100%' if you don't mind a little stretching */
+            background-size: cover; 
+            background-position: center center;
+            min-height: 500px; /* Reducing height on mobile helps show more of the photo width */
+        }
+        
+        .hero .hero-content img {
+            width: 80%; /* Makes your logo/names a bit larger on small screens */
+            margin-bottom: 20%;
+        }
+    }
+        
     .final-hero-banner {
         /* Increased height so more of the landscape photo is visible */
         min-height: 800px; 
