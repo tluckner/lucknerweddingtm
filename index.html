@@ -77,20 +77,15 @@ CSS
         margin-top: -300px; 
     }
 
-    /* Updated CSS for the landscape mountain photo */
-    .footer-image-container {
+    .final-hero-banner {
+        min-height: 600px; /* Adjust this to make the banner taller or shorter */
+        background: url("mountains.jpg") center center no-repeat;
+        background-size: cover; /* This makes it fill the full width and height */
         width: 100%;
-        line-height: 0; /* Removes white space at the bottom */
         display: block;
         margin: 0;
         padding: 0;
-        overflow: hidden;
-    }
-
-    .img-full {
-        width: 100%;
-        height: auto;
-        display: block;
+        position: relative;
     }
 </style>
 </head>
@@ -511,9 +506,7 @@ CSS
     </div>
 </section>
 
-<div class="footer-image-container">
-    <img src="mountains.jpg" alt="Tommy and Maria" class="rotated-full-width">
-</div>
+<div class="final-hero-banner"></div>
     
 <footer>
     <div class="container">
