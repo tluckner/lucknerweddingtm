@@ -63,9 +63,11 @@
     .hero-content {
         margin-top: -300px; /* Adjust this number to move it higher or lower */
     }
+        
     .hero {
-        background: url("landscape.png") center center no-repeat;
+        background-image: url("landscape.png");
         background-size: cover;
+        background-position: center center;
         min-height: 750px;
         width: 100%;
         display: block;
@@ -75,25 +77,19 @@
     @media (max-width: 768px) {
         .hero {
             /* This height calculation (750/1920) ensures the full image fits */
-            min-height: 0 !important;
-            height: 0;
-            padding-bottom: 39%; /* This creates a box the exact shape of your photo */
-            background-size: contain !important;
-            background-position: top center !important;
+            background-size: contain !important; 
+            background-repeat: no-repeat;
+            /* Shorter height for mobile to fit the wide photo shape */
+            min-height: 250px !important; 
+            background-color: #fff;
         }
 
         .hero-content {
-            /* Adjusts the logo/names to sit inside the smaller mobile image */
-            margin-top: 0 !important;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
+           margin-top: -80px !important;
         }
         
         .hero-content img {
-            width: 50% !important; /* Makes logo smaller to fit the height */
+            width: 60% !important;
         }
     }
         
