@@ -63,46 +63,37 @@
     .hero-content {
         margin-top: -300px; /* Adjust this number to move it higher or lower */
     }
-    Since you now have a properly oriented landscape version of mountains.jpg, the code becomes much simpler. You no longer need to use transform or scale to fix the rotation.
-
-Here is the exact way to update your index.html to display this new image as a full-width banner at the end of the page.
-
-1. Update the CSS
-Go to the <style> block at the top of your index.html (around line 67). Replace the previous "rotated" CSS with these clean, standard rules:
-
-CSS
-
-<style>
-    .hero-content {
-        margin-top: -300px; 
-    }
-
     .hero {
-        background-image: url("landscape.png");
+        background: url("landscape.png") center center no-repeat;
         background-size: cover;
-        background-position: center center;
         min-height: 750px;
         width: 100%;
+        display: block;
     }
 
-    /* Mobile Settings: Make the image "Fit" instead of "Fill" */
+    /* Mobile View - Full Image Visibility */
     @media (max-width: 768px) {
         .hero {
-            /* This ensures the entire image width is visible */
-            background-size: contain !important; 
-            background-repeat: no-repeat;
-            /* We lower the height so there isn't a massive empty gap below the photo */
-            min-height: 250px !important; 
-            background-color: #fff; /* Matches the page background */
+            /* This height calculation (750/1920) ensures the full image fits */
+            min-height: 0 !important;
+            height: 0;
+            padding-bottom: 39%; /* This creates a box the exact shape of your photo */
+            background-size: contain !important;
+            background-position: top center !important;
         }
-        
+
         .hero-content {
-            /* Adjusts your names/logo to fit in the new smaller header */
-            margin-top: -80px !important;
+            /* Adjusts the logo/names to sit inside the smaller mobile image */
+            margin-top: 0 !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
         }
         
         .hero-content img {
-            width: 60% !important; /* Shrinks the logo so it doesn't look huge */
+            width: 50% !important; /* Makes logo smaller to fit the height */
         }
     }
         
