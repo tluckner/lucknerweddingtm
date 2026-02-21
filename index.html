@@ -63,24 +63,33 @@
     .hero-content {
         margin-top: -300px; /* Adjust this number to move it higher or lower */
     }
-    .footer-image-container {
-        width: 100%;
-        height: 500px; /* This defines the "window" height for your banner */
-        overflow: hidden;
-        position: relative;
-        background: #000; /* Optional: adds a black background if gaps appear */
+    Since you now have a properly oriented landscape version of mountains.jpg, the code becomes much simpler. You no longer need to use transform or scale to fix the rotation.
+
+Here is the exact way to update your index.html to display this new image as a full-width banner at the end of the page.
+
+1. Update the CSS
+Go to the <style> block at the top of your index.html (around line 67). Replace the previous "rotated" CSS with these clean, standard rules:
+
+CSS
+
+<style>
+    .hero-content {
+        margin-top: -300px; 
     }
 
-    .rotated-full-width {
-        /* We set the width/height to fill the container before rotating */
+    /* Updated CSS for the landscape mountain photo */
+    .footer-image-container {
         width: 100%;
-        height: 100%;
-        
-        /* This handles the 90-degree counterclockwise rotation */
-        transform: rotate(-90deg) scale(1.5); 
-        
-        /* This ensures the image covers the area without leaving gaps */
-        object-fit: cover;
+        line-height: 0; /* Removes white space at the bottom */
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .img-full {
+        width: 100%;
+        height: auto;
         display: block;
     }
 </style>
