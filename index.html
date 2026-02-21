@@ -68,7 +68,12 @@
     height: 120px; /* Increase this number to make the logo larger */
     width: auto;  /* Maintains the correct proportions */
 }
-        
+
+    @media (max-width: 768px) {
+    header .logo img {
+        height: 80px; /* Smaller, cleaner size for Mobile */
+    }
+}
         @media (max-width: 768px) {
     .hero .hero-content {
         margin-top: -295px; /* Adjust this to move the larger logo up or down on the phone */
